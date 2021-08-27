@@ -14,7 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $nome = "Ricas";
+    $arr = [1,2,3,4,5];
+    $nomes = ['Misa','David','Deric'];
+
+    return view('welcome', 
+        [
+            'nome' => $nome,
+            'idade' => 21,
+            'arr' => $arr,
+            'nomes' => $nomes
+        ]);
 });
 
 Route::get('/contact', function () {
